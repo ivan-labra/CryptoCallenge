@@ -1,12 +1,12 @@
 import Styled from 'styled-components/native';
-import {Theme} from '../../utils/theme';
+import {theme} from '../../utils/theme';
 
 export const ViewConteiner = Styled.View`
     flex-direction: row;
     justyfy-items:center;
     padding-bottom:35px;
     border-bottom-width: 0.5px;
-    border-bottom-color: ${Theme.greey};
+    border-bottom-color: ${theme.greey};
     margin:15px 35px
 `;
 
@@ -34,15 +34,15 @@ export const TextTitle = Styled.Text`
 `;
 
 export const ChangeText = Styled.Text`
-    color:black;
+    color: ${theme.black};
     font-size:14px;
-    font-weight: 5000;
-    color: ${(props: {green: Boolean}) =>
-      props.green ? `${Theme.green}` : `${Theme.red}`};
+    font-weight: 500;
+    color: ${(props: {value: number}) =>
+      props.value > 0 ? `${theme.green}` : `${theme.red}`};
 `;
 
 export const CodeCrypto = Styled.Text`
-    color: ${Theme.greey}
+    color: ${theme.greey}
 `;
 
 export const ChangeContainer = Styled.View`

@@ -30,16 +30,13 @@ const ViewCrypto = ({item}: {item: Crypto}): JSX.Element => (
         <CodeCrypto>{item.symbol}</CodeCrypto>
         <ChangeContainer>
           {item.dollar_percentage_change > 0 ? (
-            <>
-              <ImgArrow source={Arrow_green} />
-              <ChangeText green>{item.dollar_percentage_change}%</ChangeText>
-            </>
+            <ImgArrow source={Arrow_green} />
           ) : (
-            <>
-              <ImgArrow source={Arrow_red} />
-              <ChangeText>{item.dollar_percentage_change}%</ChangeText>
-            </>
+            <ImgArrow source={Arrow_red} />
           )}
+          <ChangeText value={item.dollar_percentage_change}>
+            {item.dollar_percentage_change}%
+          </ChangeText>
         </ChangeContainer>
       </Data>
     </DataConteiner>

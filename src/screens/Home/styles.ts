@@ -1,12 +1,12 @@
 import Styled from 'styled-components/native';
-import {Theme} from '../../utils/theme';
+import {theme} from '../../utils/theme';
 
 export const CryptoList = Styled.FlatList`
     padding-vertical:25px
 `;
 
 export const TextBtn = Styled.Text`
-    color:${Theme.blueLink};
+    color:${theme.blueLink};
     font-size: 19px;
     font-weight: 400;
 `;

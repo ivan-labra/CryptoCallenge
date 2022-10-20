@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import store from './src/store';
 import Home from './src/screens/Home/Home';
 import Header from './src/components/Header/index';
-import {Theme} from './src/utils/theme';
+import {theme} from './src/utils/theme';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +19,7 @@ const App = () => (
           options={{
             headerTitle: () => <Header />,
             headerStyle: {
-              backgroundColor: Theme.blue,
+              backgroundColor: theme.blue,
             },
           }}
         />

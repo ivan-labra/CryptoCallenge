@@ -10,17 +10,14 @@ const Home = (): JSX.Element => {
   const dataCryptos: Crypto[] = useAppSelector(
     (state: RootState) => state.cryptos.cryptos,
   );
-
-  const onPress = () => console.log(dataCryptos);
-
   return (
     <SafeAreaView>
       <CryptoList
         data={dataCryptos}
-        keyExtractor={(item: {id: number}) => item.id}
+        keyExtractor={(item: Crypto) => item.id}
         renderItem={({item}: {item: Crypto}) => <ViewCrypto item={item} />}
       />
-      <BtnAdd onPress={onPress}>
+      <BtnAdd>
         <TextBtn> + Add a Cryptocurrency </TextBtn>
       </BtnAdd>
     </SafeAreaView>

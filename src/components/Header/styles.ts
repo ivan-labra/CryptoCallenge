@@ -1,4 +1,5 @@
 import Styled from 'styled-components/native';
+import {theme} from '../../utils/theme';
 
 export const HeaderConteiner = Styled.View`
     width: 95%;
@@ -7,12 +8,14 @@ export const HeaderConteiner = Styled.View`
     padding-vertical:42px;
     align-items: center;
 `;
+
 export const TittleText = Styled.Text`
-    color: white;
+    color: ${theme.white};
     font-size: 24px;
     font-weight: 700;
     left: -35%
 `;
+
 export const UserImage = Styled.Image`
     width: 50px;
     height: 50px;
