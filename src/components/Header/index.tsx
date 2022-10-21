@@ -1,14 +1,14 @@
 import React from 'react';
-import { HeaderConteiner, TittleText, UserImage } from './styles';
+import { HeaderContainer, TittleText, UserImage } from './styles';
 
 const Header = (): JSX.Element => (
-	<HeaderConteiner>
+	<HeaderContainer>
 		<TittleText>CryptoTracker Pro</TittleText>
 		<UserImage
 			source={{
 				uri: 'https://res.cloudinary.com/dwflhw6kg/image/upload/v1666027013/sample.jpg',
 			}}
 		/>
-	</HeaderConteiner>
+	</HeaderContainer>
 );
 export default Header;

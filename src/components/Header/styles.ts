@@ -1,7 +1,7 @@
 import Styled from 'styled-components/native';
 import { theme } from '../../utils/theme';
 
-export const HeaderConteiner = Styled.View`
+export const HeaderContainer = Styled.View`
     width: 95%;
     flex-direction: row;
     padding-horizontal:18px;

@@ -15,7 +15,9 @@ const Home = (): JSX.Element => {
 			<CryptoList
 				data={dataCryptos}
 				keyExtractor={(item: Crypto) => item.id}
-				renderItem={({ item }: { item: Crypto }) => <ViewCrypto item={item} />}
+				renderItem={({ item }: { item: Crypto }) => (
+					<ViewCrypto item={item} />
+				)}
 			/>
 			<BtnAdd>
 				<TextBtn> + Add a Cryptocurrency </TextBtn>
