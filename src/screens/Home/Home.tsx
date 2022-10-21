@@ -7,21 +7,21 @@ import { RootState } from '../../store';
 import { Crypto } from '../../interface';
 
 const Home = (): JSX.Element => {
-  const dataCryptos: Crypto[] = useAppSelector(
-    (state: RootState) => state.cryptos.cryptos,
-  );
-  return (
-    <SafeAreaView>
-      <CryptoList
-        data={dataCryptos}
-        keyExtractor={(item: Crypto) => item.id}
-        renderItem={({ item }: { item: Crypto }) => <ViewCrypto item={item} />}
-      />
-      <BtnAdd>
-        <TextBtn> + Add a Cryptocurrency </TextBtn>
-      </BtnAdd>
-    </SafeAreaView>
-  );
+	const dataCryptos: Crypto[] = useAppSelector(
+		(state: RootState) => state.cryptos.cryptos,
+	);
+	return (
+		<SafeAreaView>
+			<CryptoList
+				data={dataCryptos}
+				keyExtractor={(item: Crypto) => item.id}
+				renderItem={({ item }: { item: Crypto }) => <ViewCrypto item={item} />}
+			/>
+			<BtnAdd>
+				<TextBtn> + Add a Cryptocurrency </TextBtn>
+			</BtnAdd>
+		</SafeAreaView>
+	);
 };
 
 export default Home;
