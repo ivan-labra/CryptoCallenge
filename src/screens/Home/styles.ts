@@ -1,5 +1,5 @@
 import Styled from 'styled-components/native';
-import {theme} from '../../utils/theme';
+import { theme } from '../../utils/theme';
 
 export const CryptoList = Styled.FlatList`
     padding-vertical:25px

@@ -1,10 +1,10 @@
 import React from 'react';
-import {BtnAdd, TextBtn, CryptoList} from './styles';
-import {SafeAreaView} from 'react-native';
-import {useAppSelector} from '../../Hooks/hooksState';
+import { BtnAdd, TextBtn, CryptoList } from './styles';
+import { SafeAreaView } from 'react-native';
+import { useAppSelector } from '../../Hooks/hooksState';
 import ViewCrypto from '../../components/ViewCrypto';
-import {RootState} from '../../store';
-import {Crypto} from '../../interface';
+import { RootState } from '../../store';
+import { Crypto } from '../../interface';
 
 const Home = (): JSX.Element => {
   const dataCryptos: Crypto[] = useAppSelector(
@@ -15,7 +15,7 @@ const Home = (): JSX.Element => {
       <CryptoList
         data={dataCryptos}
         keyExtractor={(item: Crypto) => item.id}
-        renderItem={({item}: {item: Crypto}) => <ViewCrypto item={item} />}
+        renderItem={({ item }: { item: Crypto }) => <ViewCrypto item={item} />}
       />
       <BtnAdd>
         <TextBtn> + Add a Cryptocurrency </TextBtn>

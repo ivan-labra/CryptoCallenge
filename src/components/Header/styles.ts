@@ -1,5 +1,5 @@
 import Styled from 'styled-components/native';
-import {theme} from '../../utils/theme';
+import { theme } from '../../utils/theme';
 
 export const HeaderConteiner = Styled.View`
     width: 95%;

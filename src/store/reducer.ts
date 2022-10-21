@@ -1,4 +1,4 @@
-import {ADD_CRYPTO} from './actions';
+import { ADD_CRYPTO } from './actions';
 
 const initialState = {
   cryptos: [
@@ -34,7 +34,7 @@ const initialState = {
 
 export default (
   state = initialState,
-  action: {type: string; payload: any[]},
+  action: { type: string; payload: any[] },
 ) => {
   switch (action.type) {
     case ADD_CRYPTO:

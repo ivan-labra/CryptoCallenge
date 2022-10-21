@@ -1,8 +1,8 @@
-import {createStore, applyMiddleware, combineReducers} from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import reducer from './reducer';
 
-const rootReducer = combineReducers({cryptos: reducer});
+const rootReducer = combineReducers({ cryptos: reducer });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 

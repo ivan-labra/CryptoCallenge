@@ -1,5 +1,5 @@
 import React from 'react';
-import {HeaderConteiner, TittleText, UserImage} from './styles';
+import { HeaderConteiner, TittleText, UserImage } from './styles';
 
 const Header = (): JSX.Element => (
   <HeaderConteiner>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Arrow_green from '../../assets/arrow_Green.png';
 import Arrow_red from '../../assets/arrow_Red.png';
-import {Crypto} from '../../interface/index';
+import { Crypto } from '../../interface/index';
 import {
   ViewConteiner,
   TextTitle,
@@ -14,7 +14,7 @@ import {
   ChangeText,
 } from './styles';
 
-const ViewCrypto = ({item}: {item: Crypto}): JSX.Element => (
+const ViewCrypto = ({ item }: { item: Crypto }): JSX.Element => (
   <ViewConteiner>
     <LogoCrypto
       source={{
