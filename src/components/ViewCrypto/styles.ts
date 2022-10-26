@@ -38,7 +38,7 @@ export const ChangeText = Styled.Text`
     font-size:14px;
     font-weight: 500;
     color: ${(props: { value: number }) =>
-			props.value > 0 ? `${theme.green}` : `${theme.red}`};
+      props.value > 0 ? `${theme.green}` : `${theme.red}`};
 `;
 
 export const CodeCrypto = Styled.Text`
