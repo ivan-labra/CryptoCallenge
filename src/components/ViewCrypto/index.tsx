@@ -1,6 +1,6 @@
 import React from 'react';
-import Arrow_green from '../../assets/arrow_Green.png';
-import Arrow_red from '../../assets/arrow_Red.png';
+import ArrowGreen from '../../assets/arrow_Green.png';
+import ArrowRed from '../../assets/arrow_Red.png';
 import { Crypto } from '../../interface/index';
 import {
   ViewConteiner,
@@ -29,11 +29,11 @@ const ViewCrypto = ({ item }: { item: Crypto }): JSX.Element => (
       <Data>
         <CodeCrypto>{item.symbol}</CodeCrypto>
         <ChangeContainer>
-          {item.dollar_percentage_change > 0 ? (
-            <ImgArrow source={Arrow_green} />
-          ) : (
-            <ImgArrow source={Arrow_red} />
-          )}
+          {
+            <ImgArrow
+              source={item.dollar_percentage_change > 0 ? ArrowGreen : ArrowRed}
+            />
+          }
           <ChangeText value={item.dollar_percentage_change}>
             {item.dollar_percentage_change}%
           </ChangeText>
