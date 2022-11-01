@@ -1,9 +1,18 @@
 export interface Crypto {
-  symbol: string;
   id: number;
+  symbol: string;
   name: string;
-  abb: string;
-  srcLogo: string;
-  price: number;
-  dollar_percentage_change: number;
+  slug: string;
+  logoUrl: string;
+  metrics: Metrics;
+  price_usd: number;
+}
+
+interface Metrics {
+  market_data: Market_data;
+}
+
+interface Market_data {
+  price_usd: number;
+  percent_change_usd_last_24_hours: number;
 }

@@ -14,4 +14,5 @@ export const TextBtn = Styled.Text`
 export const BtnAdd = Styled.TouchableOpacity`
   top: 5px;
   margin: auto;
+  padding: 50px;
 `;
