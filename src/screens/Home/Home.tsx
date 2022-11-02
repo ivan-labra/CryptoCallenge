@@ -12,9 +12,9 @@ const Home = (): JSX.Element => {
     (state: RootState) => state.cryptos.cryptos
   );
 
-  const dispacht = useAppDispatch();
+  const dispatch = useAppDispatch();
   useEffect(() => {
-    dispacht(addCryptos());
+    dispatch(addCryptos());
   }, []);
 
   const renderItem = ({ item }) => <ViewCrypto item={item} />;
