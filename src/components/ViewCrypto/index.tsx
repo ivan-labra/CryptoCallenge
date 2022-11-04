@@ -18,30 +18,29 @@ const ViewCrypto = ({ item }: { item: Crypto }): JSX.Element => (
   <ViewConteiner>
     <LogoCrypto
       source={{
-        uri: `https://messari.io/asset-images/${item.id}/32.png`,
+        uri: `https://asset-images.messari.io/images/${item.Asset.id}/32.png?v=2`,
       }}
     />
     <DataConteiner>
       <Data>
-        <TextTitle>{item.name}</TextTitle>
-        <TextTitle>${item.metrics.market_data.price_usd.toFixed(2)}</TextTitle>
+        <TextTitle>{item.Asset.name}</TextTitle>
+        <TextTitle>${item.market_data.price_usd.toFixed(2)}</TextTitle>
       </Data>
       <Data>
-        <CodeCrypto>{item.symbol}</CodeCrypto>
+        <CodeCrypto>{item.Asset.symbol}</CodeCrypto>
         <ChangeContainer>
           {
             <ImgArrow
               source={
-                item.metrics.market_data.percent_change_usd_last_24_hours > 0
+                item.market_data.percent_change_usd_last_24_hours > 0
                   ? ArrowGreen
                   : ArrowRed
               }
             />
           }
-          <ChangeText
-            value={item.metrics.market_data.percent_change_usd_last_24_hours}>
+          <ChangeText value={item.market_data.percent_change_usd_last_24_hours}>
             {Math.abs(
-              item.metrics.market_data.percent_change_usd_last_24_hours
+              item.market_data.percent_change_usd_last_24_hours
             ).toFixed(2)}
             %
           </ChangeText>

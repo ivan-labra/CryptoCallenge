@@ -6,4 +6,7 @@ export const theme = {
   black: '#212b36',
   blueLink: '#768ba0',
   greey: '#808992',
+  yellow: '#fbd24d',
+  greeyInputs: '#ABB2B9',
+  greeyDisabled: '#d1b450',
 };
