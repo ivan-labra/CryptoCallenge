@@ -16,18 +16,19 @@ const CryptoLogic = ({ navigation }): JSX.Element => {
   const [focus, setFocus] = useState(false);
   const [search, setSearch] = useState('');
 
-  const dispacht = useAppDispatch();
+  const dispatch = useAppDispatch();
   const cryptoCollection: Crypto[] = useAppSelector(
     (state: RootState) => state.cryptos.cryptos
   );
   const handleAddCrypto = (): void => {
-    dispacht(addCrypto(search, cryptoCollection));
+    dispatch(addCrypto(search, cryptoCollection));
     setSearch('');
     navigation.navigate('Home');
   };
   const handleFocus = () => {
-    setFocus(!focus);
+    setFocus(prev => !prev);
   };
+
   return (
     <ConteinerData>
       <Title>Add a Cryptocurrency</Title>
@@ -43,7 +44,7 @@ const CryptoLogic = ({ navigation }): JSX.Element => {
       />
       <ButtonAdd
         disabled={search.length > 0 ? false : true}
-        onPress={() => handleAddCrypto()}>
+        onPress={handleAddCrypto}>
         <ButtonText value={search.length > 0}>Add</ButtonText>
       </ButtonAdd>
     </ConteinerData>
