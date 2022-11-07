@@ -6,13 +6,17 @@ import store from './src/store';
 import Home from './src/screens/Home/Home';
 import Header from './src/components/Header/index';
 import { theme } from './src/utils/theme';
+import AddCrypto from './src/screens/AddCrypto/AddCrypto';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => (
   <Provider store={store}>
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          animation: 'slide_from_right',
+        }}>
         <Stack.Screen
           name="Home"
           component={Home}
@@ -22,6 +26,11 @@ const App = () => (
               backgroundColor: theme.blue,
             },
           }}
+        />
+        <Stack.Screen
+          name="AddCrypto"
+          component={AddCrypto}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

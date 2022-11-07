@@ -3,13 +3,15 @@ export interface Crypto {
   symbol: string;
   name: string;
   slug: string;
-  logoUrl: string;
-  metrics: Metrics;
-  price_usd: number;
+  market_data: Market_data;
+  Asset: Asset;
 }
 
-interface Metrics {
-  market_data: Market_data;
+interface Asset {
+  id: string;
+  symbol: string;
+  name: string;
+  slug: string;
 }
 
 interface Market_data {
