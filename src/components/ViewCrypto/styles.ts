@@ -55,3 +55,7 @@ export const ImgArrow = Styled.Image`
   height: 15px;
   margin-top: 3.5px;
 `;
+
+export const DeleteCrypto = Styled.TouchableOpacity`
+  
+`;
