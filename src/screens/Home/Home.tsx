@@ -14,14 +14,14 @@ const Home = ({ navigation }): JSX.Element => {
     (state: RootState) => state.cryptos.cryptos
   );
 
-  const updateC = () => {
+  const handleUpdate = () => {
     if (dataCryptos.length > 0) {
       dispatch(updateCrypto());
     }
   };
 
   useEffect(() => {
-    const intervalUpdate = setInterval(() => updateC(), 3000);
+    const intervalUpdate = setInterval(() => handleUpdate(), 3000);
     intervalUpdate;
     return () => {
       clearInterval(intervalUpdate);

@@ -5,7 +5,7 @@ import { Alert } from 'react-native';
 
 export const ADD_CRYPTO = 'ADD_CRYPTO';
 export const DELETE_CRYPTO = 'DELETE_CRYPTO';
-export const UPDATE_CRYPTO = 'UPDATE_CRYPTO';
+export const UPDATE_CURRENCIES = 'UPDATE_CURRENCIES';
 
 export const addCrypto: Function = (
   nameOrSymbol: string,
@@ -54,7 +54,7 @@ export const updateCrypto = () => {
       );
       const resJson = await res.json();
 
-      dispatch({ type: UPDATE_CRYPTO, payload: resJson });
+      dispatch({ type: UPDATE_CURRENCIES, payload: resJson });
     } catch (error) {
       console.log(error);
     }

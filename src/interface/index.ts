@@ -1,8 +1,4 @@
 export interface Crypto {
-  id: number;
-  symbol: string;
-  name: string;
-  slug: string;
   market_data: Market_data;
   Asset: Asset;
 }

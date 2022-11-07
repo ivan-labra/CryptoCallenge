@@ -1,7 +1,7 @@
 import Styled from 'styled-components/native';
 import { theme } from '../../utils/theme';
 
-export const ViewConteiner = Styled.View`
+export const ViewContainer = Styled.TouchableOpacity`
   flex-direction: row;
   justyfy-items: center;
   padding-bottom: 35px;
@@ -54,8 +54,4 @@ export const ImgArrow = Styled.Image`
   width: 15px;
   height: 15px;
   margin-top: 3.5px;
-`;
-
-export const DeleteCrypto = Styled.TouchableOpacity`
-  
 `;
