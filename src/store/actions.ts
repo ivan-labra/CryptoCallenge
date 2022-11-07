@@ -18,10 +18,10 @@ export const addCrypto: Function = (nameOrSymbol: string, array: Crypto[]) => {
         if (!verify) {
           dispatch({ type: ADD_CRYPTO, payload: resJson.data });
         } else {
-          Alert.alert('You already have this cryptocurrency');
+          Alert.alert('Error', 'You already have this cryptocurrency');
         }
       } else {
-        Alert.alert('You misspelled the name of the cryptocurrency.');
+        Alert.alert('Error', 'You misspelled the name of the cryptocurrency.');
       }
     } catch (error) {
       console.error(error);

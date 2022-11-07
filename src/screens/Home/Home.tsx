@@ -12,6 +12,7 @@ const Home = ({ navigation }): JSX.Element => {
   );
 
   const renderItem = ({ item }) => <ViewCrypto item={item} />;
+
   return (
     <SafeAreaView>
       <CryptoList
