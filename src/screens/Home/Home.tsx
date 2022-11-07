@@ -16,7 +16,7 @@ const Home = ({ navigation }): JSX.Element => {
 
   const updateC = () => {
     if (dataCryptos.length > 0) {
-      dispatch(updateCrypto(dataCryptos));
+      dispatch(updateCrypto());
     }
   };
 

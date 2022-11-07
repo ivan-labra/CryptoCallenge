@@ -20,9 +20,17 @@ export default (
         cryptos: [...state.cryptos.filter(e => e.Asset.id !== action.payload)],
       };
     case UPDATE_CRYPTO:
+      const newList = state.cryptos.map(e => {
+        action.payload.data.map(update => {
+          if (update.id === e.Asset.id) {
+            return (e.market_data = update.metrics.market_data);
+          }
+        });
+        return e;
+      });
       return {
         ...state,
-        cryptos: action.payload,
+        cryptos: newList,
       };
     default:
       return state;

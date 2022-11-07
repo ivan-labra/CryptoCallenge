@@ -46,7 +46,7 @@ export const deleteCrypto = (id: string) => {
   };
 };
 
-export const updateCrypto = (currentList: Crypto[]) => {
+export const updateCrypto = () => {
   return async dispatch => {
     try {
       const res = await fetch(
@@ -54,16 +54,7 @@ export const updateCrypto = (currentList: Crypto[]) => {
       );
       const resJson = await res.json();
 
-      const newList = currentList.map(e => {
-        resJson.data.map(update => {
-          if (update.id === e.Asset.id) {
-            return (e.market_data = update.metrics.market_data);
-          }
-        });
-        return e;
-      });
-
-      dispatch({ type: UPDATE_CRYPTO, payload: newList });
+      dispatch({ type: UPDATE_CRYPTO, payload: resJson });
     } catch (error) {
       console.log(error);
     }
