@@ -33,5 +33,5 @@ export const ButtonAdd = Styled.TouchableOpacity`
 export const ButtonText = Styled.Text`
   font-size: 20px;
   font-weight: 700;
-  color: ${props => (props.value > 0 ? theme.greey : theme.greeyDisabled)}
+  color: ${props => (props.value ? theme.greey : theme.greeyDisabled)}
 `;

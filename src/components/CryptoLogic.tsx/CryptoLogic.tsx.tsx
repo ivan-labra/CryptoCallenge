@@ -42,9 +42,7 @@ const CryptoLogic = ({ navigation }): JSX.Element => {
         value={search}
         onChangeText={setSearch}
       />
-      <ButtonAdd
-        disabled={search.length > 0 ? false : true}
-        onPress={handleAddCrypto}>
+      <ButtonAdd disabled={search.length < 0} onPress={handleAddCrypto}>
         <ButtonText value={search.length > 0}>Add</ButtonText>
       </ButtonAdd>
     </ConteinerData>
