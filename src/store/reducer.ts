@@ -22,9 +22,9 @@ export default (
     case UPDATE_CURRENCIES:
       const { data } = action.payload;
       const cryptoCurrencieUpdater = state.cryptos.map(crypto => {
-        data.map(updateCurrency => {
+        data.forEach(updateCurrency => {
           if (updateCurrency.id === crypto.Asset.id) {
-            return (crypto.market_data = updateCurrency.metrics.market_data);
+            crypto.market_data = updateCurrency.metrics.market_data;
           }
         });
         return crypto;

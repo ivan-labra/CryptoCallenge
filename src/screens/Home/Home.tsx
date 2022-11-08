@@ -22,7 +22,6 @@ const Home = ({ navigation }): JSX.Element => {
 
   useEffect(() => {
     const intervalUpdate = setInterval(() => handleUpdate(), 3000);
-    intervalUpdate;
     return () => {
       clearInterval(intervalUpdate);
     };
