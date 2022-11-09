@@ -21,7 +21,7 @@ const ViewCrypto = ({ item }: { item: Crypto }): JSX.Element => {
   const dispatch = useAppDispatch();
 
   const handleDelete = () => {
-    Alert.alert('', '¿Do you want to delete this cryptocurrency?', [
+    Alert.alert('', 'Do you want to delete this cryptocurrency?', [
       { text: 'No', style: 'cancel' },
       {
         text: 'Delete',
