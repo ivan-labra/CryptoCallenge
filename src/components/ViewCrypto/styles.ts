@@ -1,7 +1,7 @@
 import Styled from 'styled-components/native';
 import { theme } from '../../utils/theme';
 
-export const ViewConteiner = Styled.View`
+export const ViewContainer = Styled.TouchableOpacity`
   flex-direction: row;
   justyfy-items: center;
   padding-bottom: 35px;

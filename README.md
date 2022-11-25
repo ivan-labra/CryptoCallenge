@@ -1,4 +1,3 @@
-
 # Cryptotracker Pro - Devlabs challenge
 
 ## Cryptocurrency exchange rate tracker
@@ -11,7 +10,10 @@
 
 ### Screens
 
-- Home_screen: This screen shows the cryptocurrencies that the user has selected with their respective information, a head with the name of the app plus a user image and a button that takes you to another screen (in procces). 
+- Home_screen:
+  This screen shows the cryptocurrencies that the user has selected with their respective information that is updated every 3 seconds, a header with the name of the app plus an image of the user and a button that redirects them to another screen.
+- Add_Crypto:
+  This screen fulfills the function of being able to add cryptocurrencies to your list, it has a button to go back, and a small form to add the name or abbreviation of a cryptocurrency that you want to add.
 
 ### Technologies
 
